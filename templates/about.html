@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="../assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="current-list-item"><a href="about.html">About</a></li>
+								<li><a href="news.html">Articles</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						
+						<h1>About Us</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- featured section -->
+	<div class="mt-150">
+		<div class="container">
+			
+					
+						<h2 class="pb-3"><span class="orange-text">{{post.title}}</span></h2>
+						<p></p>
+						<div class="content">
+							
+							<p>{{post.content}}</p>
+							
+						</div>			
+			
+		</div>
+	</div>
+	<!-- end featured section -->
+
+
+	<!-- team section -->
+	<div class="mt-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">
+						<h3>Our <span class="orange-text">Team</span></h3>
+						<p>Dedicated to giving you the best updates about Kenya.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-item">
+						
+						<div class="team-bg team-bg-1">
+							<img style='height: 100%; width: 100%; overflow: hidden; object-fit: contain' src="{{ post.thumbnail1 }}" alt=""></div>
+						
+						<h4>{{post.member1}} <span>{{post.position1}}</span></h4>
+						
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="single-team-item">
+						<div class="team-bg team-bg-2">
+							<img style='height: 100%; width: 100%; overflow: hidden; object-fit: contain' src="{{ post.thumbnail2 }}" alt="">
+						</div>
+						<h4>{{post.member2}} <span>{{post.position2}}</span></h4>
+						
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+					<div class="single-team-item">
+						<div class="team-bg team-bg-3">
+							<img style='height: 100%; width: 100%; overflow: hidden; object-fit: contain' src="{{ post.thumbnail3 }}" alt="">
+						</div>
+						<h4>{{post.member3}} <span>{{post.position3}}</span></h4>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end team section -->
+
+	<br>
+    <br>
+
+
+{% endblock %}

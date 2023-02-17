@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<!-- logo -->
+						<div class="site-logo">
+							<a href="index.html">
+								<img src="../assets/img/logo.png" alt="">
+							</a>
+						</div>
+						<!-- logo -->
+
+						<!-- menu start -->
+						<nav class="main-menu">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li class="current-list-item"><a href="news.html">Articles</a></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li>
+									<div class="header-icons">
+										
+										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+						<div class="mobile-menu"></div>
+						<!-- menu end -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- search area -->
+	<div class="search-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<span class="close-btn"><i class="fas fa-window-close"></i></span>
+					<div class="search-bar">
+						<div class="search-bar-tablecell">
+							<h3>Search For:</h3>
+							<input type="text" placeholder="Keywords">
+							<button type="submit">Search <i class="fas fa-search"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end search arewa -->
+	
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<!-- <p>Category: {{post.tag}}</p> -->
+						<h1>{{post.title}}</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+	
+	<!-- single article section -->
+	<div class="mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				
+					<div class="single-article-section">
+						<div class="single-article-text">
+							<div class="single-artcile-bg">
+								<img style='height: 100%; width: 100%; overflow: hidden; object-fit: contain' src="{{ post.thumbnail }}" alt="">
+							
+							</div>
+							<p class="blog-meta">
+								<span class="author"><i class="fas fa-user"></i>{{post.publisher}}</span>
+								<span class="date"><i class="fas fa-calendar"></i>{{post.date}}</span>
+							</p>
+							<h2>{{ post.summary}}</h2>
+							
+							<p> {{post.content}}</p>
+							</div>
+
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!-- end single article section -->
+
+{% endblock %}
